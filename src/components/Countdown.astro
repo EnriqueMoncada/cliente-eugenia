@@ -1,0 +1,109 @@
+---
+---
+
+<div class="flex flex-col items-center justify-center w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto my-4">
+  <!-- Countdown Grid -->
+  <div id="countdown-timer" class="grid grid-cols-4 gap-2 text-center w-full my-4">
+    <div class="glass-card p-3 rounded-xl flex flex-col items-center justify-center border border-sky-200 shadow-sm">
+      <span id="days" class="text-2xl sm:text-3xl font-bold text-celeste-700 font-sans">00</span>
+      <span class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-medium">Días</span>
+    </div>
+
+    <div class="glass-card p-3 rounded-xl flex flex-col items-center justify-center border border-sky-200 shadow-sm">
+      <span id="hours" class="text-2xl sm:text-3xl font-bold text-celeste-700 font-sans">00</span>
+      <span class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-medium">Horas</span>
+    </div>
+
+    <div class="glass-card p-3 rounded-xl flex flex-col items-center justify-center border border-sky-200 shadow-sm">
+      <span id="minutes" class="text-2xl sm:text-3xl font-bold text-celeste-700 font-sans">00</span>
+      <span class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-medium">Minutos</span>
+    </div>
+
+    <div class="glass-card p-3 rounded-xl flex flex-col items-center justify-center border border-sky-200 shadow-sm">
+      <span id="seconds" class="text-2xl sm:text-3xl font-bold text-celeste-700 font-sans">00</span>
+      <span class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest font-medium">Segundos</span>
+    </div>
+  </div>
+
+  <!-- Calendar Buttons -->
+<!--   <div class="flex flex-col sm:flex-row items-center gap-3 w-full mt-2">
+    <button id="btn-download-ics" class="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#79a5c9] to-[#5384b0] text-white font-medium text-sm shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+      <svg class="w-5 h-5 text-slate-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+      <span>Agendar en mi Calendario (.ics)</span>
+    </button>
+  </div> -->
+</div>
+
+<script>
+  // Target date: August 29, 2026, 8:00 PM (20:00:00)
+  const targetDate = new Date('2026-08-29T20:00:00');
+
+  const daysEl = document.getElementById('days');
+  const hoursEl = document.getElementById('hours');
+  const minutesEl = document.getElementById('minutes');
+  const secondsEl = document.getElementById('seconds');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate.getTime() - now.getTime();
+
+    if (diff <= 0) {
+      if (daysEl) daysEl.innerText = '00';
+      if (hoursEl) hoursEl.innerText = '00';
+      if (minutesEl) minutesEl.innerText = '00';
+      if (secondsEl) secondsEl.innerText = '00';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+    if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+    if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
+    if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Download ICS File functionality
+  const btnIcs = document.getElementById('btn-download-ics');
+  if (btnIcs) {
+    btnIcs.addEventListener('click', () => {
+      const title = "Mis 15 Años - Anthonella Morales";
+      const description = "Estás cordialmente invitado a festejar los 15 años de Anthonella Morales.";
+      const location = "RESTAURANTE CHINO MI SABOR";
+      const startDate = "20260829T200000";
+      const endDate = "20260830T020000";
+
+      const icsData = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Invitacion 15 Anthonella//ES",
+        "BEGIN:VEVENT",
+        `SUMMARY:${title}`,
+        `DESCRIPTION:${description}`,
+        `LOCATION:${location}`,
+        `DTSTART:${startDate}`,
+        `DTEND:${endDate}`,
+        "STATUS:CONFIRMED",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Mis_15_Anthonella_Morales.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+</script>

@@ -1,0 +1,107 @@
+---
+---
+
+<!-- Fixed background decorative elements layer matching video reference -->
+<div class="fixed inset-0 pointer-events-none z-10 overflow-hidden" id="bg-decorations">
+  
+  <!-- Top Center Tiara / Crown Ornament (Identical to Video) -->
+  <div class="absolute top-3 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-95 transition-transform duration-500 hover:scale-110">
+    <svg class="w-10 h-10 text-slate-200 drop-shadow-lg filter" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+      <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+      <circle cx="3" cy="4" r="1.2" fill="#e2e8f0" />
+      <circle cx="21" cy="4" r="1.2" fill="#e2e8f0" />
+    </svg>
+    <div class="w-20 h-0.5 bg-gradient-to-r from-transparent via-slate-300 to-transparent mt-1"></div>
+  </div>
+
+  <!-- Top Left Floral Corner Ornament (esquinasSuperiores.jpeg Espejo con CSS scale-x-[-1]) -->
+  <div class="absolute top-0 left-0 w-44 sm:w-56 md:w-72 pointer-events-none z-10">
+    <img 
+      src="/esquinasSuperiores.png" 
+      alt="Adorno Floral Esquina Superior Izquierda" 
+      class="w-full h-auto object-contain object-top-right mix-blend-multiply opacity-90 filter drop-shadow-md transform scale-x-[-1]"
+    />
+  </div>
+
+  <!-- Top Right Floral Corner Ornament (esquinasSuperiores.jpeg) -->
+  <div class="absolute top-0 right-0 w-44 sm:w-56 md:w-72 pointer-events-none z-10">
+    <img 
+      src="/esquinasSuperiores.png" 
+      alt="Adorno Floral Esquina Superior Derecha" 
+      class="w-full h-auto object-contain object-top-right mix-blend-multiply opacity-90 filter drop-shadow-md"
+    />
+  </div>
+
+  <!-- Bottom Left Floral Corner Ornament (esquinasInferiores.jpeg) -->
+  <div class="absolute bottom-0 left-0 w-44 sm:w-56 md:w-72 pointer-events-none z-10">
+    <img 
+      src="/esquinasInferiores.png" 
+      alt="Adorno Floral Esquina Inferior Izquierda" 
+      class="w-full h-auto object-contain object-bottom-left mix-blend-multiply opacity-90 filter drop-shadow-md"
+    />
+  </div>
+
+  <!-- Bottom Right Floral Corner Ornament (esquinasInferiores.jpeg Espejo con CSS scale-x-[-1]) -->
+  <div class="absolute bottom-0 right-0 w-44 sm:w-56 md:w-72 pointer-events-none z-10">
+    <img 
+      src="/esquinasInferiores.png" 
+      alt="Adorno Floral Esquina Inferior Derecha" 
+      class="w-full h-auto object-contain object-bottom-left mix-blend-multiply opacity-90 filter drop-shadow-md transform scale-x-[-1]"
+    />
+  </div>
+
+  <!-- Silver Floating Butterfly Left -->
+  <div class="absolute top-1/3 left-3 md:left-8 w-9 h-9 md:w-12 md:h-12 animate-float-slow opacity-80">
+    <svg viewBox="0 0 50 50" fill="currentColor" class="w-full h-full text-slate-200 drop-shadow-md">
+      <path d="M25 22 C 20 10, 5 10, 8 24 C 10 32, 22 28, 25 32 C 28 28, 40 32, 42 24 C 45 10, 30 10, 25 22 Z M25 24 C 22 34, 10 40, 15 45 C 20 48, 24 38, 25 35 C 26 38, 30 48, 35 45 C 40 40, 28 34, 25 24 Z" />
+    </svg>
+  </div>
+
+  <!-- Silver Floating Butterfly Right -->
+  <div class="absolute top-1/2 right-3 md:right-8 w-8 h-8 md:w-11 md:h-11 animate-float-slow opacity-80" style="animation-delay: 1.8s;">
+    <svg viewBox="0 0 50 50" fill="currentColor" class="w-full h-full text-slate-200 drop-shadow-md transform -scale-x-100 rotate-12">
+      <path d="M25 22 C 20 10, 5 10, 8 24 C 10 32, 22 28, 25 32 C 28 28, 40 32, 42 24 C 45 10, 30 10, 25 22 Z M25 24 C 22 34, 10 40, 15 45 C 20 48, 24 38, 25 35 C 26 38, 30 48, 35 45 C 40 40, 28 34, 25 24 Z" />
+    </svg>
+  </div>
+
+  <!-- Quinceañera Rear Illustration Silhouette (Vestido celeste con gran lazo en la espalda) -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-52 md:w-68 h-72 md:h-88 pointer-events-none opacity-30 md:opacity-35 flex justify-center items-end">
+    <svg viewBox="0 0 200 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+      <!-- Hair / Head & Tiara -->
+      <path d="M90 40 C 90 22, 110 22, 110 40 C 110 52, 105 60, 100 65 C 95 60, 90 52, 90 40 Z" fill="#334155" />
+      <circle cx="100" cy="30" r="11" fill="#475569" />
+      <path d="M92 26 L100 18 L108 26 Z" fill="#f8fafc" />
+
+      <!-- Bodice & Big Satin Ribbon Bow on Back -->
+      <path d="M85 68 C 90 62, 110 62, 115 68 L 122 100 C 105 105, 95 105, 78 100 Z" fill="#79a5c9" opacity="0.95" />
+      
+      <!-- Big Bow on Waist (Identical to Video) -->
+      <circle cx="100" cy="102" r="8" fill="#e2e8f0" />
+      <path d="M100 102 C 80 92, 65 110, 85 118 Z" fill="#9ec1de" />
+      <path d="M100 102 C 120 92, 135 110, 115 118 Z" fill="#9ec1de" />
+      <path d="M96 102 L80 160 L92 160 Z" fill="#79a5c9" opacity="0.8" />
+      <path d="M104 102 L120 160 L108 160 Z" fill="#79a5c9" opacity="0.8" />
+
+      <!-- Volumetric Ballgown (Vestido celeste volumétrico con pliegues) -->
+      <path d="M78 100 C 55 120, 25 180, 5 300 L 195 300 C 175 180, 145 120, 122 100 C 105 108, 95 108, 78 100 Z" fill="url(#dressGradV)" />
+
+      <!-- Dress Sparkles & Folds -->
+      <path d="M100 102 Q 75 200 25 300" stroke="#bde0fe" stroke-width="2.5" opacity="0.6" />
+      <path d="M100 102 Q 100 200 100 300" stroke="#ffffff" stroke-width="2.5" opacity="0.7" />
+      <path d="M100 102 Q 125 200 175 300" stroke="#bde0fe" stroke-width="2.5" opacity="0.6" />
+
+      <defs>
+        <linearGradient id="dressGradV" x1="100" y1="100" x2="100" y2="300" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#9ec1de" />
+          <stop offset="50%" stop-color="#79a5c9" />
+          <stop offset="100%" stop-color="#47739e" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Sparkles Floating Background Dots -->
+  <div class="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
+
+</div>

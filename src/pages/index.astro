@@ -1,0 +1,476 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BackgroundDecorations from '../components/BackgroundDecorations.astro';
+import Envelope from '../components/Envelope.astro';
+import Countdown from '../components/Countdown.astro';
+import GiftModal from '../components/GiftModal.astro';
+import MusicPlayer from '../components/MusicPlayer.astro';
+import SilverFrame from '../components/SilverFrame.astro';
+import DressCodeModal from '../components/DressCodeModal.astro';
+---
+
+<Layout title="Mis 15 Años - Anthonella Morales">
+
+  <!-- 3D Envelope Landing & Opening Sequence (Humo Azul + Chispas + Lazo con Joya Corazón y Corona) -->
+  <Envelope />
+
+  <!-- Persistent Background Ornaments (Corona, Rosas en las 4 esquinas, Mariposas, Quinceañera con vestido azul) -->
+  <BackgroundDecorations />
+
+  <!-- Ambient Music Player Floating Widget -->
+  <MusicPlayer />
+
+  <!-- Main Content Container (Mobile & Desktop Responsive) -->
+  <main class="relative z-20 mx-auto max-w-lg md:max-w-2xl lg:max-w-3xl min-h-screen px-4 py-8 sm:px-6 md:px-8 flex flex-col items-center gap-10 md:gap-14">
+
+    <!-- 1. PORTADA -->
+    <section class="reveal-on-scroll w-full pt-6 pb-4 flex flex-col items-center text-center">
+      <!-- Crown Top Ornament -->
+      <div class="flex flex-col items-center justify-center mb-2">
+        <svg class="w-8 h-8 text-sky-300 drop-shadow filter" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+          <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+        </svg>
+        <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-sky-300 to-transparent mt-1"></div>
+      </div>
+
+      <p class="font-serif italic text-slate-100 text-base sm:text-lg tracking-widest uppercase mb-2">
+        Están cordialmente invitados a festejar :
+      </p>
+
+      <!-- Main Title: Mis 15 Años (Matching Video Title Style) -->
+      <div class="relative py-1 my-1 flex items-center justify-center gap-2">
+        <span class="font-cursive text-5xl sm:text-6xl text-sky-300 drop-shadow-lg">Mis</span>
+        <span class="font-serif font-bold text-6xl sm:text-7xl text-silver-gradient drop-shadow-xl border-x-2 border-slate-300/40 px-3">15</span>
+        <span class="font-cursive text-5xl sm:text-6xl text-sky-300 drop-shadow-lg">Años</span>
+      </div>
+
+      <div class="my-2">
+        <h1 class="font-cursive text-5xl sm:text-6xl text-white drop-shadow-md tracking-wide">
+          Anthonella Morales
+        </h1>
+      </div>
+
+      <div class="w-36 h-0.5 bg-gradient-to-r from-transparent via-slate-200 to-transparent my-3"></div>
+
+      <!-- SECCIÓN CON IMAGEN fondoCentro.jpeg Y ESPEJO AL CENTRO -->
+      <div class="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl aspect-[9/16] mx-auto mt-4 rounded-3xl overflow-hidden shadow-2xl border-2 border-white/80 bg-contain bg-no-repeat bg-center flex flex-col items-center justify-between p-4 sm:p-6 md:p-8"
+           style="background-image: url('/fondoCentro.jpeg');">
+        
+        <!-- LUXURY SILVER PHOTO FRAME SLOT (EL ESPEJO) - ELEVADO Y REDUCIDO -->
+        <div class="relative z-10 w-44 sm:w-52 md:w-60 lg:w-68 aspect-[3/4] rounded-t-full rounded-b-3xl p-2.5 sm:p-3 bg-gradient-to-tr from-slate-300 via-white to-slate-200 shadow-2xl border-2 border-white/90 group transition-transform duration-500 hover:scale-[1.02] mt-6 sm:mt-10 md:mt-32 mb-auto -translate-y-2 sm:-translate-y-4">
+          
+          <!-- Outer Glow & Diamond Border Line -->
+          <div class="absolute inset-1.5 border-2 border-dashed border-sky-300/80 rounded-t-full rounded-b-2xl pointer-events-none"></div>
+
+          <!-- Top Tiara Crown Jewel Ornament -->
+          <div class="absolute -top-5 left-1/2 -translate-x-1/2 z-20 text-slate-100 drop-shadow-[0_0_10px_rgba(255,255,255,0.9)]">
+            <svg class="w-10 h-10 text-slate-100 filter drop-shadow" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+              <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+            </svg>
+          </div>
+
+          <!-- Photo Container Slot -->
+          <div class="relative w-full h-full rounded-t-full rounded-b-xl overflow-hidden bg-gradient-to-tr from-sky-400 via-sky-200 to-sky-100 border border-slate-300/50 shadow-inner flex flex-col items-center justify-center">
+            
+            <!-- Soft Sky Blue Gradient Fill -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-sky-300/90 via-sky-200/80 to-blue-50/90"></div>
+
+            <!-- Subtle Sparkle Accent inside Mirror -->
+            <div class="relative z-10 flex flex-col items-center justify-center p-6 text-center">
+              <span class="text-white text-3xl sm:text-4xl drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] animate-pulse">✨</span>
+              <span class="text-xs uppercase tracking-widest font-bold text-sky-950/70 mt-2 font-serif">Mis 15 Años</span>
+            </div>
+
+            <!-- Glossy Glass Reflection Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-white/10 pointer-events-none"></div>
+          </div>
+
+          <!-- Diamond Corner Accents -->
+          <span class="absolute top-4 left-4 text-white text-xs drop-shadow-[0_0_6px_rgba(255,255,255,1)]">✦</span>
+          <span class="absolute top-4 right-4 text-white text-xs drop-shadow-[0_0_6px_rgba(255,255,255,1)]">✦</span>
+          <span class="absolute bottom-4 left-4 text-white text-xs drop-shadow-[0_0_6px_rgba(255,255,255,1)]">✦</span>
+          <span class="absolute bottom-4 right-4 text-white text-xs drop-shadow-[0_0_6px_rgba(255,255,255,1)]">✦</span>
+
+          <!-- Bottom Crown & Ribbon Image (corona.jpeg) -->
+          <div class="absolute -bottom-16 sm:-bottom-20 left-1/2 -translate-x-1/2 z-30 w-20 sm:w-24 md:w-28 pointer-events-none filter drop-shadow-lg">
+            <img src="/corona.png" alt="Corona de Quinceañera" class="w-full h-auto object-contain filter drop-shadow-[0_4px_8px_rgba(0,0,0,0.4)]" />
+          </div>
+        </div>
+
+        <!-- ELEGANT BANNER TEXT IN THE CENTER BELOW MIRROR -->
+        <div class="relative z-20 mt-2 py-2 px-6 sm:py-3 sm:px-8 md:py-3.5 md:px-10 rounded-full bg-slate-900/75 border border-sky-300/50 backdrop-blur-md shadow-xl flex items-center justify-center gap-2">
+          <span class="text-sky-300 text-xs sm:text-sm animate-pulse">✨</span>
+          <span class="font-serif italic text-sm sm:text-base md:text-lg lg:text-xl text-sky-100 tracking-widest drop-shadow">
+            Un sueño hecho realidad • Mis 15 Años
+          </span>
+          <span class="text-sky-300 text-xs sm:text-sm animate-pulse">✨</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. MENSAJE -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-xl">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <span class="text-xs font-bold uppercase tracking-widest text-celeste-600 block mb-3">MIS 15 AÑOS</span>
+
+        <p class="font-serif italic text-base sm:text-lg text-slate-700 leading-relaxed font-normal">
+          "Hace quince años nació una hermosa niña, enviada por Dios para ser criada y formada como el más grande tesoro. Hay momentos en la vida que imaginamos, soñamos y esperamos. Uno de esos momentos ha llegado."
+        </p>
+      </SilverFrame>
+    </section>
+
+    <!-- 3. PADRES -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-2xl text-center shadow-md">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-2">Padres</h3>
+        <p class="text-lg sm:text-xl font-medium text-slate-700 leading-snug">
+          Cristian Morales <br/>
+          <span class="text-celeste-600 font-serif italic text-base">y</span> <br/>
+          Argelis Ospina
+        </p>
+      </SilverFrame>
+    </section>
+
+    <!-- 4. FECHA Y CONTEO REGRESIVO -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-xl">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <p class="text-xs uppercase tracking-widest text-slate-600 font-medium mb-2">
+          Estás cordialmente invitado a festejar mis 15 años el día:
+        </p>
+        
+        <div class="my-4 py-3 border-y border-slate-300/80 flex items-center justify-center gap-2 sm:gap-4 text-slate-900 font-serif font-bold text-lg sm:text-2xl">
+          <span class="text-celeste-700">AGOSTO</span>
+          <span class="text-slate-300">|</span>
+          <span class="text-2xl sm:text-3xl text-slate-900 bg-sky-100/80 px-3 py-1 rounded-xl shadow-inner">SÁBADO 29</span>
+          <span class="text-slate-300">|</span>
+          <span class="text-celeste-700">2026</span>
+        </div>
+
+        <!-- Live Countdown & Add to Calendar Button -->
+        <Countdown />
+      </SilverFrame>
+    </section>
+
+    <!-- 5. RECEPCIÓN -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-lg">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-2">Recepción</h3>
+        
+        <!-- Silver Map Pin Icon (Matching Video Frame 00:41) -->
+        <div class="w-12 h-12 text-slate-600 mx-auto my-3 flex items-center justify-center filter drop-shadow">
+          <svg class="w-10 h-10 fill-current text-slate-400" viewBox="0 0 24 24">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+        </div>
+
+        <p class="font-sans font-bold text-lg text-slate-800 tracking-wider my-2">
+          RESTAURANTE CHINO MI SABOR
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=RESTAURANTE+CHINO+MI+SABOR" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-900 text-white font-medium text-sm shadow-md hover:bg-slate-800 hover:scale-105 transition-all">
+          <svg class="w-4 h-4 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          <span>Ver Ubicación en Google Maps</span>
+        </a>
+      </SilverFrame>
+    </section>
+
+    <!-- 6. HORARIO -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-md flex flex-col items-center justify-center">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-3">Horario</h3>
+
+        <!-- Analog Clock Icon (Matching Video Frame 00:51) -->
+        <div class="w-14 h-14 rounded-full border-2 border-celeste-500 flex items-center justify-center my-1 bg-sky-50 shadow-inner">
+          <svg class="w-8 h-8 text-celeste-600 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" stroke-width="1.5"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 2"/>
+          </svg>
+        </div>
+
+        <p class="font-serif text-3xl font-bold text-celeste-700 mt-2">
+          8:00 PM
+        </p>
+      </SilverFrame>
+    </section>
+
+    <!-- 7. DRESS CODE -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-lg">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-1">Código de Vestimenta:</h3>
+        <p class="font-sans font-bold text-sm tracking-widest text-celeste-600 uppercase mb-2">
+          TRAJE ELEGANTE
+        </p>
+
+        <!-- Dynamic Click Prompt -->
+        <div class="inline-flex items-center justify-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-celeste-700 text-xs font-semibold mb-6 border border-sky-200/80 animate-pulse">
+          <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
+          </svg>
+          <span>Click para más detalle</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Damas (Mujer) Button -->
+          <button id="btn-dress-damas" class="bg-sky-50/80 hover:bg-sky-100/90 rounded-2xl p-4 border border-sky-200/80 flex flex-col items-center justify-center transition-all duration-300 transform hover:scale-[1.03] hover:shadow-md cursor-pointer group">
+            <div class="w-12 h-12 text-celeste-600 mb-2 group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 64 64" fill="currentColor" class="w-full h-full drop-shadow-sm">
+                <path d="M28 8 C 28 8, 32 14, 36 8 L 44 18 C 40 22, 38 26, 36 28 L 48 56 L 16 56 L 28 28 C 26 26, 24 22, 20 18 Z" opacity="0.9" />
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-800">DAMAS</span>
+            <span class="text-[10px] text-sky-700 mt-1.5 font-bold bg-white/90 px-2.5 py-0.5 rounded-full shadow-xs border border-sky-200 group-hover:bg-sky-500 group-hover:text-white transition-colors">Ver detalle 👁️</span>
+          </button>
+
+          <!-- Caballeros (Hombre) Button -->
+          <button id="btn-dress-caballeros" class="bg-slate-100/80 hover:bg-slate-200/80 rounded-2xl p-4 border border-slate-300/80 flex flex-col items-center justify-center transition-all duration-300 transform hover:scale-[1.03] hover:shadow-md cursor-pointer group">
+            <div class="w-12 h-12 text-slate-700 mb-2 group-hover:scale-110 transition-transform">
+              <svg viewBox="0 0 64 64" fill="currentColor" class="w-full h-full drop-shadow-sm">
+                <path d="M20 10 L 44 10 L 48 24 L 38 24 L 32 36 L 26 24 L 16 24 Z" opacity="0.8" />
+                <path d="M20 26 L 25 26 L 22 56 L 16 56 Z M 44 26 L 39 26 L 42 56 L 48 56 Z" opacity="0.9" />
+                <path d="M30 10 L 34 10 L 33 24 L 31 24 Z" fill="#79a5c9" />
+              </svg>
+            </div>
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-800">CABALLEROS</span>
+            <span class="text-[10px] text-slate-700 mt-1.5 font-bold bg-white/90 px-2.5 py-0.5 rounded-full shadow-xs border border-slate-200 group-hover:bg-slate-800 group-hover:text-white transition-colors">Ver detalle 👁️</span>
+          </button>
+        </div>
+      </SilverFrame>
+    </section>
+
+    <!-- 8. COLORES RESERVADOS -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-md">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-4">Colores reservados</h3>
+
+        <div class="flex items-center justify-center gap-6 my-4">
+          <!-- Plateado Circle -->
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-slate-400 via-slate-200 to-white border-2 border-white shadow-md"></div>
+            <span class="text-xs text-slate-600 mt-2 font-medium">Plateado</span>
+          </div>
+          <!-- Celeste Circle -->
+          <div class="flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-[#5b86b3] border-2 border-white shadow-md"></div>
+            <span class="text-xs text-slate-600 mt-2 font-medium">Celeste</span>
+          </div>
+        </div>
+
+        <p class="text-sm text-slate-700 leading-relaxed max-w-xs mx-auto font-normal italic">
+          "Los colores celeste y plateado en todas sus tonalidades están reservados para la quinceañera"
+        </p>
+      </SilverFrame>
+    </section>
+
+    <!-- 9. REGALOS / LLUVIA DE SOBRES -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-xl">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed mb-4 font-normal">
+          "Tu presencia sería el mejor regalo para mí, pero si deseas hacerme un obsequio, tienes esta opción"
+        </p>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-4">Lluvia de sobres</h3>
+
+        <!-- Gift Details Modal Launcher -->
+        <GiftModal />
+      </SilverFrame>
+    </section>
+
+    <!-- 10. PUNTUALIDAD -->
+    <section class="reveal-on-scroll w-full">
+      <SilverFrame className="glass-card rounded-2xl text-center shadow-sm">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+
+        <h3 class="font-cursive text-4xl font-bold text-slate-800 mb-2">Puntualidad:</h3>
+        <p class="font-serif italic text-base sm:text-lg text-slate-800">
+          "Tu puntualidad depende de mi día perfecto"
+        </p>
+      </SilverFrame>
+    </section>
+
+    <!-- 11. CIERRE Y CONFIRMACIÓN DE ASISTENCIA -->
+    <section class="reveal-on-scroll w-full pb-16">
+      <SilverFrame className="glass-card rounded-3xl text-center shadow-2xl relative overflow-hidden bg-gradient-to-b from-white via-sky-50/40 to-white">
+        <!-- Crown Top Ornament -->
+        <div class="flex flex-col items-center justify-center mb-2">
+          <svg class="w-8 h-8 text-celeste-600 drop-shadow-sm filter" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+            <circle cx="12" cy="3" r="1.5" fill="#ffffff" />
+          </svg>
+          <div class="w-12 h-0.5 bg-gradient-to-r from-transparent via-celeste-500/50 to-transparent mt-1"></div>
+        </div>
+        
+        <h2 class="font-serif font-bold text-lg sm:text-xl text-slate-800 uppercase tracking-wide leading-relaxed mb-4">
+          GRACIAS POR COMPARTIR MIS SUEÑOS, MIS ALEGRÍAS Y POR ESTAR HOY CONMIGO.
+        </h2>
+
+        <p class="font-cursive text-4xl sm:text-5xl text-celeste-700 italic mb-6">
+          ¡Te estaré esperando!
+        </p>
+
+        <!-- RSVP Form & WhatsApp Button -->
+        <div class="max-w-xs mx-auto space-y-3">
+          <input 
+            type="text" 
+            id="guest-name" 
+            placeholder="Tu nombre completo..." 
+            class="w-full px-4 py-3 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-400 bg-white/90 text-slate-800 text-center shadow-inner"
+          />
+
+          <button id="btn-rsvp-whatsapp" class="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold text-sm shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            <span>Confirmar Asistencia en WhatsApp</span>
+          </button>
+        </div>
+
+        <div class="mt-8 pt-4 border-t border-slate-200/60 text-[11px] text-slate-400">
+          Mis 15 Años • Anthonella Morales • 2026
+        </div>
+      </SilverFrame>
+    </section>
+
+  </main>
+
+  <!-- Dress Code Details Modal -->
+  <DressCodeModal />
+
+</Layout>
+
+<script>
+  // Scroll reveal observer animation
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+
+  // Dress Code Modal Triggers
+  const btnDamas = document.getElementById('btn-dress-damas');
+  const btnCaballeros = document.getElementById('btn-dress-caballeros');
+
+  if (btnDamas) {
+    btnDamas.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('open-dress-modal', { detail: { gender: 'damas' } }));
+    });
+  }
+
+  if (btnCaballeros) {
+    btnCaballeros.addEventListener('click', () => {
+      window.dispatchEvent(new CustomEvent('open-dress-modal', { detail: { gender: 'caballeros' } }));
+    });
+  }
+
+  // WhatsApp RSVP script
+  const rsvpBtn = document.getElementById('btn-rsvp-whatsapp');
+  const guestNameInput = document.getElementById('guest-name') as HTMLInputElement;
+
+  if (rsvpBtn) {
+    rsvpBtn.addEventListener('click', () => {
+      const guestName = guestNameInput ? guestNameInput.value.trim() : '';
+      let message = "¡Hola Anthonella! Confirmo mi asistencia a tus 15 Años. ✨";
+      if (guestName) {
+        message = `¡Hola Anthonella! Mi nombre es ${guestName} y confirmo con mucha alegría mi asistencia a tus 15 Años. ✨`;
+      }
+      const encodedMsg = encodeURIComponent(message);
+      window.open(`https://api.whatsapp.com/send?text=${encodedMsg}`, '_blank');
+    });
+  }
+</script>

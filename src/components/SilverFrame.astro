@@ -1,0 +1,49 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = "" } = Astro.props;
+---
+
+<div class={`relative p-6 sm:p-8 ${className}`}>
+  <!-- SVG Silver Ornate Frame Border Overlay -->
+  <svg class="absolute inset-0 w-full h-full pointer-events-none drop-shadow-md text-slate-300" viewBox="0 0 400 200" preserveAspectRatio="none" fill="none">
+    <!-- Outer Border -->
+    <rect x="8" y="8" width="384" height="184" rx="16" stroke="url(#silverGradFrame)" stroke-width="2" opacity="0.8" />
+    <rect x="14" y="14" width="372" height="172" rx="12" stroke="url(#silverGradFrame)" stroke-width="1" stroke-dasharray="4 2" opacity="0.6" />
+
+    <!-- Corner Ornaments (Top Left) -->
+    <path d="M 8 30 C 8 16, 16 8, 30 8 C 24 18, 18 24, 8 30 Z" fill="url(#silverGradFrame)" opacity="0.9" />
+    <circle cx="24" cy="24" r="3" fill="#ffffff" />
+    
+    <!-- Corner Ornaments (Top Right) -->
+    <path d="M 392 30 C 392 16, 384 8, 370 8 C 376 18, 382 24, 392 30 Z" fill="url(#silverGradFrame)" opacity="0.9" />
+    <circle cx="376" cy="24" r="3" fill="#ffffff" />
+
+    <!-- Corner Ornaments (Bottom Left) -->
+    <path d="M 8 170 C 8 184, 16 192, 30 192 C 24 182, 18 176, 8 170 Z" fill="url(#silverGradFrame)" opacity="0.9" />
+    <circle cx="24" cy="176" r="3" fill="#ffffff" />
+
+    <!-- Corner Ornaments (Bottom Right) -->
+    <path d="M 392 170 C 392 184, 384 192, 370 192 C 376 182, 382 176, 392 170 Z" fill="url(#silverGradFrame)" opacity="0.9" />
+    <circle cx="376" cy="176" r="3" fill="#ffffff" />
+
+    <!-- Top Center Flourish -->
+    <path d="M 180 8 Q 200 0 220 8 Q 200 16 180 8 Z" fill="url(#silverGradFrame)" />
+
+    <defs>
+      <linearGradient id="silverGradFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#f8fafc" />
+        <stop offset="30%" stop-color="#cbd5e1" />
+        <stop offset="50%" stop-color="#ffffff" />
+        <stop offset="70%" stop-color="#94a3b8" />
+        <stop offset="100%" stop-color="#e2e8f0" />
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="relative z-10">
+    <slot />
+  </div>
+</div>

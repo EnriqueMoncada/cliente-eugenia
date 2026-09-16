@@ -1,0 +1,202 @@
+---
+---
+
+<div id="dress-code-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 backdrop-blur-sm hidden p-4 opacity-0 transition-opacity duration-300">
+  <div class="relative w-full max-w-md glass-card rounded-3xl p-6 sm:p-8 shadow-2xl border border-sky-200 text-slate-800 transform scale-95 transition-transform duration-300 overflow-hidden" id="dress-code-modal-card">
+    
+    <!-- Decorative top ribbon glow -->
+    <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-sky-300 via-celeste-500 to-sky-300"></div>
+
+    <!-- Close Button -->
+    <button id="close-dress-code-modal" aria-label="Cerrar modal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100 transition-colors z-10 cursor-pointer">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Modal Header -->
+    <div class="text-center mb-5">
+      <div class="flex items-center justify-center gap-2 mb-1">
+        <span class="text-sky-400 text-sm">✨</span>
+        <h3 class="font-serif text-2xl font-bold text-slate-800">Código de Vestimenta</h3>
+        <span class="text-sky-400 text-sm">✨</span>
+      </div>
+      <p class="text-xs text-slate-500 font-medium">Guía de Traje Elegante para la celebración</p>
+      
+      <!-- Selector Tabs (Damas / Caballeros) -->
+      <div class="flex bg-slate-100/90 p-1 rounded-xl mt-4 border border-slate-200">
+        <button id="tab-damas" class="flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer">
+          <span>👗</span>
+          <span>DAMAS / MUJER</span>
+        </button>
+        <button id="tab-caballeros" class="flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer">
+          <span>👔</span>
+          <span>CABALLEROS / HOMBRE</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- CONTENT: DAMAS (MUJER) -->
+    <div id="content-damas" class="space-y-4">
+      <div class="bg-sky-50/80 rounded-2xl p-4 border border-sky-100/80 text-left">
+        <div class="flex items-center gap-3 mb-3 pb-2 border-b border-sky-200/60">
+          <div class="w-10 h-10 rounded-full bg-sky-100 text-celeste-700 flex items-center justify-center shrink-0 shadow-sm">
+            <svg viewBox="0 0 64 64" fill="currentColor" class="w-6 h-6">
+              <path d="M28 8 C 28 8, 32 14, 36 8 L 44 18 C 40 22, 38 26, 36 28 L 48 56 L 16 56 L 28 28 C 26 26, 24 22, 20 18 Z" opacity="0.9" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-800 text-lg">Vestimenta para Damas</h4>
+            <span class="text-[10px] font-bold text-sky-700 bg-sky-200/80 px-2 py-0.5 rounded-full uppercase tracking-wider">Traje Elegante / Gala</span>
+          </div>
+        </div>
+
+        <ul class="text-xs text-slate-700 space-y-2.5 pl-1 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-celeste-600 font-bold text-sm">•</span>
+            <span><strong>Vestuario recomendado:</strong> Vestido largo de noche o vestido de cóctel elegante (estilo gala o semi-gala).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-celeste-600 font-bold text-sm">•</span>
+            <span><strong>Colores sugeridos:</strong> Tonos sobrios y elegantes como azul marino, verde esmeralda, vino tinto, dorado, rosa o negro formal.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-celeste-600 font-bold text-sm">•</span>
+            <span><strong>Calzado y Accesorios:</strong> Zapatos de tacón o sandalias elegantes de vestir, joyería sutil y bolso de mano (clutch).</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Notice about reserved colors -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-sky-400/30 text-xs shadow-md flex items-start gap-3 text-left">
+        <span class="text-xl shrink-0">👑</span>
+        <div class="space-y-1">
+          <p class="font-bold text-sky-300 uppercase tracking-wider text-[10px]">Recordatorio de Colores</p>
+          <p class="text-[11px] leading-relaxed text-slate-200">
+            Los colores <strong class="text-sky-300 font-semibold">celeste y plateado</strong> en todas sus tonalidades están <span class="text-sky-200 underline font-medium">reservados exclusivamente para la quinceañera</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT: CABALLEROS (HOMBRE) -->
+    <div id="content-caballeros" class="space-y-4 hidden">
+      <div class="bg-slate-100/90 rounded-2xl p-4 border border-slate-200/80 text-left">
+        <div class="flex items-center gap-3 mb-3 pb-2 border-b border-slate-200">
+          <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center shrink-0 shadow-sm">
+            <svg viewBox="0 0 64 64" fill="currentColor" class="w-6 h-6">
+              <path d="M20 10 L 44 10 L 48 24 L 38 24 L 32 36 L 26 24 L 16 24 Z" opacity="0.8" />
+              <path d="M20 26 L 25 26 L 22 56 L 16 56 Z M 44 26 L 39 26 L 42 56 L 48 56 Z" opacity="0.9" />
+              <path d="M30 10 L 34 10 L 33 24 L 31 24 Z" fill="#335579" />
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-800 text-lg">Vestimenta para Caballeros</h4>
+            <span class="text-[10px] font-bold text-slate-700 bg-slate-200/90 px-2 py-0.5 rounded-full uppercase tracking-wider">Traje Formal / Elegante</span>
+          </div>
+        </div>
+
+        <ul class="text-xs text-slate-700 space-y-2.5 pl-1 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-slate-600 font-bold text-sm">•</span>
+            <span><strong>Vestuario recomendado:</strong> Traje completo (saco y pantalón de vestir) con camisa de manga larga.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-slate-600 font-bold text-sm">•</span>
+            <span><strong>Complementos:</strong> Uso de corbata o corbatín (pajarita) elegante.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-slate-600 font-bold text-sm">•</span>
+            <span><strong>Colores sugeridos:</strong> Traje en tonos oscuros o neutros (negro, azul marino, gris oscuro o beige). Camisa clara (blanca o marfil).</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-slate-600 font-bold text-sm">•</span>
+            <span><strong>Calzado:</strong> Zapatos formales de cuero (Oxford, Derby o mocasines elegantes) y correa a juego.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Notice about reserved colors -->
+      <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-sky-400/30 text-xs shadow-md flex items-start gap-3 text-left">
+        <span class="text-xl shrink-0">👑</span>
+        <div class="space-y-1">
+          <p class="font-bold text-sky-300 uppercase tracking-wider text-[10px]">Recordatorio de Colores</p>
+          <p class="text-[11px] leading-relaxed text-slate-200">
+            Se solicita evitar corbatas, camisas o accesorios en tonos <strong class="text-sky-300 font-semibold">celeste y plateado</strong>, reservados para la quinceañera.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('dress-code-modal');
+  const modalCard = document.getElementById('dress-code-modal-card');
+  const closeBtn = document.getElementById('close-dress-code-modal');
+
+  const tabDamas = document.getElementById('tab-damas');
+  const tabCaballeros = document.getElementById('tab-caballeros');
+  const contentDamas = document.getElementById('content-damas');
+  const contentCaballeros = document.getElementById('content-caballeros');
+
+  function setActiveTab(gender: 'damas' | 'caballeros') {
+    if (!tabDamas || !tabCaballeros || !contentDamas || !contentCaballeros) return;
+
+    if (gender === 'damas') {
+      // Active Damas Tab
+      tabDamas.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer bg-sky-500 text-white shadow-sm";
+      tabCaballeros.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-slate-600 hover:text-slate-900 hover:bg-slate-200/60";
+
+      contentDamas.classList.remove('hidden');
+      contentCaballeros.classList.add('hidden');
+    } else {
+      // Active Caballeros Tab
+      tabCaballeros.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer bg-slate-800 text-white shadow-sm";
+      tabDamas.className = "flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-slate-600 hover:text-slate-900 hover:bg-slate-200/60";
+
+      contentCaballeros.classList.remove('hidden');
+      contentDamas.classList.add('hidden');
+    }
+  }
+
+  function showDressModal(gender: 'damas' | 'caballeros') {
+    if (!modal || !modalCard) return;
+    setActiveTab(gender);
+
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+      modal.classList.remove('opacity-0');
+      modalCard.classList.remove('scale-95');
+      modalCard.classList.add('scale-100');
+    }, 10);
+  }
+
+  function hideDressModal() {
+    if (!modal || !modalCard) return;
+    modal.classList.add('opacity-0');
+    modalCard.classList.remove('scale-100');
+    modalCard.classList.add('scale-95');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300);
+  }
+
+  // Global window listeners for opening modal from index.astro buttons
+  window.addEventListener('open-dress-modal', (e: Event) => {
+    const customEvent = e as CustomEvent;
+    const gender = customEvent.detail?.gender || 'damas';
+    showDressModal(gender);
+  });
+
+  if (tabDamas) tabDamas.addEventListener('click', () => setActiveTab('damas'));
+  if (tabCaballeros) tabCaballeros.addEventListener('click', () => setActiveTab('caballeros'));
+  if (closeBtn) closeBtn.addEventListener('click', hideDressModal);
+
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) hideDressModal();
+    });
+  }
+</script>

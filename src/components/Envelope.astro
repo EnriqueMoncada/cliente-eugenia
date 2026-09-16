@@ -1,0 +1,383 @@
+---
+---
+
+<div id="envelope-wrapper" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-md transition-all duration-1000 p-4 sm:p-6 overflow-hidden">
+  
+  <!-- Envelope 3D Container (Sized larger on PC: max-w-xl md:max-w-2xl lg:max-w-3xl) -->
+  <div id="envelope-container" class="relative w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl aspect-[16/11] perspective-1000 cursor-pointer group">
+    
+    <!-- Outer Glow Ambient Light -->
+    <div class="absolute -inset-4 bg-gradient-to-r from-sky-400/50 via-slate-100/60 to-sky-500/50 rounded-3xl blur-3xl opacity-80 group-hover:opacity-100 transition duration-1000 animate-pulse-subtle"></div>
+
+    <!-- MAIN ENVELOPE BOX -->
+    <div id="envelope-box" class="relative w-full h-full rounded-2xl shadow-2xl preserve-3d transition-transform duration-700">
+      
+      <!-- 1. ENVELOPE BACK INTERIOR POCKET -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#2d4d6b] via-[#3a638a] to-[#1f3a54] rounded-2xl border-2 border-slate-300/40 shadow-inner overflow-hidden">
+        <!-- Inner Pocket Texture -->
+        <div class="absolute inset-0 bg-[radial-gradient(#9ec1de_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
+      </div>
+
+      <!-- 2. THE LETTER CARD INSIDE (Hidden inside pocket; slides UP & becomes visible only when clicked) -->
+      <div id="letter-card" class="absolute inset-x-4 top-8 bottom-4 bg-gradient-to-b from-white via-sky-50 to-white rounded-xl shadow-2xl border border-slate-200/90 p-6 flex flex-col items-center justify-center text-center transition-all duration-1000 ease-out z-10 opacity-0 pointer-events-none transform translate-y-8">
+        <div class="w-12 h-1 bg-gradient-to-r from-transparent via-slate-300 to-transparent mb-2"></div>
+        <p class="font-serif italic text-xs sm:text-sm text-slate-500 tracking-widest uppercase">Estás cordialmente invitado a festejar</p>
+        <h3 class="font-cursive text-4xl sm:text-5xl text-sky-600 my-1">Mis 15 Años</h3>
+        <p class="font-cursive text-3xl sm:text-4xl text-slate-800">Anthonella Morales</p>
+        <div class="mt-3 flex items-center gap-2 text-[11px] uppercase tracking-widest text-slate-400">
+          <span>✨ Sábado 29 de Agosto 2026 ✨</span>
+        </div>
+      </div>
+
+      <!-- 3. ENVELOPE FRONT POCKET (Covers bottom 83% of envelope, seamless overlap with top flap) -->
+      <div id="envelope-front" class="absolute inset-x-0 bottom-0 h-[83%] bg-gradient-to-b from-[#6492bc] via-[#75a2c9] to-[#3f6d97] rounded-b-2xl border-t-2 border-b-2 border-white/90 shadow-2xl z-20 flex flex-col items-center justify-between p-3 sm:p-5 text-center">
+        
+        <!-- Diamond Studded Outer Border Line -->
+        <div class="absolute inset-1.5 border-2 border-dashed border-white/85 rounded-b-xl pointer-events-none shadow-[0_0_10px_rgba(255,255,255,0.7)]"></div>
+
+        <!-- Silver & Diamond Filigree Corners (Front Pocket) -->
+        <div class="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-white rounded-tl-lg pointer-events-none flex items-center justify-center">
+          <span class="text-[10px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,1)] transform -translate-x-1 -translate-y-1">✦</span>
+        </div>
+        <div class="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-white rounded-tr-lg pointer-events-none flex items-center justify-center">
+          <span class="text-[10px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,1)] transform translate-x-1 -translate-y-1">✦</span>
+        </div>
+        <div class="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-white rounded-bl-lg pointer-events-none flex items-center justify-center">
+          <span class="text-[10px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,1)] transform -translate-x-1 translate-y-1">✦</span>
+        </div>
+        <div class="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-white rounded-br-lg pointer-events-none flex items-center justify-center">
+          <span class="text-[10px] text-white drop-shadow-[0_0_6px_rgba(255,255,255,1)] transform translate-x-1 translate-y-1">✦</span>
+        </div>
+
+        <!-- Front Header Text (Positioned cleanly below the flap V-tip) -->
+        <div class="relative z-30 pt-6 sm:pt-8 flex flex-col items-center">
+          <!-- Crown -->
+          <div class="text-slate-100 drop-shadow mb-0.5 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+            <svg class="w-6 h-6 sm:w-8 sm:h-8 text-slate-100" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+              <circle cx="12" cy="3" r="1.2" fill="#ffffff" />
+            </svg>
+          </div>
+          <h2 class="font-cursive text-3xl sm:text-5xl md:text-6xl text-white drop-shadow-lg tracking-wide leading-tight">
+            Mis 15 Años
+          </h2>
+          <p class="font-serif italic text-slate-100 text-sm sm:text-lg md:text-xl tracking-widest opacity-95">
+            Anthonella Morales
+          </p>
+        </div>
+
+        <!-- Centerpiece: Ultra-Realistic 3D Satin Ribbon Bow & Diamond Jewel Seal -->
+        <div class="relative z-30 my-1 flex items-center justify-center w-full">
+          
+          <!-- Horizontal Wrapping Satin Ribbon with Silver Diamond Trims -->
+          <div class="absolute inset-x-0 h-8 sm:h-11 bg-gradient-to-r from-sky-950 via-sky-750 to-sky-950 shadow-2xl flex items-center justify-between px-3 border-y-2 border-white/90 shadow-[0_0_14px_rgba(255,255,255,0.6)]">
+            <div class="h-0.5 w-full bg-gradient-to-r from-transparent via-white to-transparent opacity-90"></div>
+          </div>
+
+          <!-- Realistic Vector Satin Bow Container -->
+          <div class="relative z-10 flex items-center justify-center">
+            
+            <!-- Realistic 3D Satin Bow SVG Graphics -->
+            <svg class="w-48 h-24 sm:w-64 sm:h-36 drop-shadow-[0_8px_18px_rgba(0,0,0,0.5)] pointer-events-none" viewBox="0 0 260 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="satinLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#d0e8ff"/>
+                  <stop offset="35%" stop-color="#5591c5"/>
+                  <stop offset="70%" stop-color="#2c5c8a"/>
+                  <stop offset="100%" stop-color="#163452"/>
+                </linearGradient>
+                <linearGradient id="satinRight" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#d0e8ff"/>
+                  <stop offset="35%" stop-color="#5591c5"/>
+                  <stop offset="70%" stop-color="#2c5c8a"/>
+                  <stop offset="100%" stop-color="#163452"/>
+                </linearGradient>
+                <linearGradient id="satinTailLeft" x1="0%" y1="0%" x2="50%" y2="100%">
+                  <stop offset="0%" stop-color="#528bbd"/>
+                  <stop offset="60%" stop-color="#29547d"/>
+                  <stop offset="100%" stop-color="#132c45"/>
+                </linearGradient>
+                <linearGradient id="satinTailRight" x1="100%" y1="0%" x2="50%" y2="100%">
+                  <stop offset="0%" stop-color="#528bbd"/>
+                  <stop offset="60%" stop-color="#29547d"/>
+                  <stop offset="100%" stop-color="#132c45"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Hanging Satin Ribbon Tails (Cintas colgantes) -->
+              <path d="M120 65 C110 85 75 115 55 138 L82 130 L98 140 C108 115 118 90 122 65 Z" fill="url(#satinTailLeft)" stroke="#ffffff" stroke-width="1.5" opacity="0.98"/>
+              <path d="M140 65 C150 85 185 115 205 138 L178 130 L162 140 C152 115 142 90 138 65 Z" fill="url(#satinTailRight)" stroke="#ffffff" stroke-width="1.5" opacity="0.98"/>
+
+              <!-- Main Bow Loop (Left Wing) -->
+              <path d="M130 60 C98 28 25 25 15 55 C5 82 82 92 130 68 Z" fill="url(#satinLeft)" stroke="#ffffff" stroke-width="1.8"/>
+              <!-- Inner Fold Shadow (Left) -->
+              <path d="M130 60 C105 42 45 38 35 58 C48 68 100 75 130 68 Z" fill="#0d243b" opacity="0.45"/>
+              <path d="M22 45 C48 32 98 40 122 58" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+
+              <!-- Main Bow Loop (Right Wing) -->
+              <path d="M130 60 C162 28 235 25 245 55 C255 82 178 92 130 68 Z" fill="url(#satinRight)" stroke="#ffffff" stroke-width="1.8"/>
+              <!-- Inner Fold Shadow (Right) -->
+              <path d="M130 60 C155 42 215 38 225 58 C212 68 160 75 130 68 Z" fill="#0d243b" opacity="0.45"/>
+              <path d="M238 45 C212 32 162 40 138 58" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+            </svg>
+
+            <!-- Center Diamond Brooch & Heart Seal Button -->
+            <div id="heart-seal" class="absolute z-20 w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-tr from-slate-200 via-white to-slate-300 p-1 shadow-2xl transition-all duration-300 group-hover:scale-110 flex items-center justify-center">
+              
+              <!-- Diamond Rhinestone Ring -->
+              <div class="absolute -inset-1.5 border-2 border-dashed border-white rounded-full opacity-95 animate-spin shadow-[0_0_15px_rgba(255,255,255,0.9)]" style="animation-duration: 22s;"></div>
+              
+              <!-- Sparkling Diamond Accents around ring -->
+              <span class="absolute -top-2.5 text-xs text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+              <span class="absolute -bottom-2.5 text-xs text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+              <span class="absolute -left-2.5 text-xs text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+              <span class="absolute -right-2.5 text-xs text-white drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2 text-slate-100 drop-shadow z-30">
+                <svg class="w-4 h-4 sm:w-6 sm:h-6 text-slate-100" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                </svg>
+              </div>
+
+              <div class="w-full h-full rounded-full bg-gradient-to-b from-sky-400 via-sky-600 to-sky-800 flex items-center justify-center shadow-inner border border-white/90">
+                <svg class="w-7 h-7 sm:w-9 sm:h-9 text-rose-300 drop-shadow filter" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tap to Open Hint -->
+        <div class="relative z-10 pb-1 flex items-center gap-2 text-xs sm:text-sm uppercase tracking-widest text-white font-bold animate-pulse drop-shadow">
+          <span>✨ TOCA PARA ABRIR INVITACIÓN ✨</span>
+        </div>
+
+      </div>
+
+      <!-- 4. ENVELOPE TOP FLAP (Anchored at top 0, Height 34%, V-tip ends cleanly above the title text) -->
+      <div id="envelope-flap" class="absolute top-0 left-0 right-0 h-[34%] bg-gradient-to-b from-[#5583ad] to-[#45729c] origin-top transition-transform duration-1000 preserve-3d z-20 shadow-lg rounded-t-2xl border-b-2 border-white/90 shadow-[0_0_12px_rgba(255,255,255,0.6)]" style="clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);">
+        
+        <!-- Diamond Studded V-Border Line -->
+        <svg class="w-full h-full p-2" viewBox="0 0 400 120" preserveAspectRatio="none">
+          <path d="M 10 50 L 200 110 L 390 50" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="6 4" fill="none" opacity="0.95" filter="drop-shadow(0 0 4px rgba(255,255,255,0.9))" />
+        </svg>
+
+        <!-- Diamond Jewels on Top Flap -->
+        <span class="absolute top-2 left-4 text-white text-xs drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+        <span class="absolute top-2 right-4 text-white text-xs drop-shadow-[0_0_8px_rgba(255,255,255,1)]">✦</span>
+        <span class="absolute bottom-2 left-1/2 -translate-x-1/2 text-white text-xs sm:text-sm drop-shadow-[0_0_10px_rgba(255,255,255,1)]">✦</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Volumetric Blue Smoke & Fireworks Sparks Canvas (NO CONFETTI / NO SERPENTINAS) -->
+  <canvas id="smoke-sparks-canvas" class="fixed inset-0 pointer-events-none z-50 hidden"></canvas>
+
+</div>
+
+<script>
+  const wrapper = document.getElementById('envelope-wrapper');
+  const box = document.getElementById('envelope-box');
+  const flap = document.getElementById('envelope-flap');
+  const letterCard = document.getElementById('letter-card');
+  const frontPocket = document.getElementById('envelope-front');
+  const heartSeal = document.getElementById('heart-seal');
+  const canvas = document.getElementById('smoke-sparks-canvas') as HTMLCanvasElement;
+
+  function launchDenseBlueSmokeAndSparks() {
+    if (!canvas) return;
+    canvas.classList.remove('hidden');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    interface Particle {
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      color: string;
+      alpha: number;
+      decay: number;
+      type: 'smoke' | 'spark';
+      sparkleFlicker?: number;
+    }
+
+    const particles: Particle[] = [];
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2 + 30;
+
+    // 1. SOFT TRANSLUCENT SIDE-DISPERSED SMOKE CLOUDS (Transparente y disperso a los lados - AUMENTADO)
+    const smokeCount = 110;
+    for (let i = 0; i < smokeCount; i++) {
+      const side = i % 2 === 0 ? -1 : 1; // Dispersión hacia la izquierda o derecha
+      const offsetX = side * (Math.random() * 320 + 60); // Amplia cobertura hacia las bandas laterales
+      const speedX = side * (Math.random() * 4 + 1.8) + (Math.random() - 0.5) * 2;
+
+      particles.push({
+        x: centerX + offsetX,
+        y: centerY + (Math.random() - 0.5) * 100,
+        vx: speedX, // Movimiento hacia los lados
+        vy: -Math.random() * 4 - 1.5,
+        size: Math.random() * 55 + 25,
+        color: i % 3 === 0 ? 'rgba(121, 165, 201, ' : (i % 3 === 1 ? 'rgba(189, 224, 254, ' : 'rgba(158, 193, 222, '),
+        alpha: 0.28, // Opacidad suave y transparente para no tapar la carta
+        decay: 0.004 + Math.random() * 0.006,
+        type: 'smoke'
+      });
+    }
+
+    // 2. DISPERSED SPARKS (Chispas distribuidas hacia los lados - AUMENTADO)
+    const sparkCount = 160;
+    for (let i = 0; i < sparkCount; i++) {
+      const side = i % 2 === 0 ? -1 : 1;
+      const angle = side > 0 ? (Math.random() * -Math.PI * 0.45 - Math.PI * 0.05) : (Math.random() * -Math.PI * 0.45 - Math.PI * 0.5); 
+      const speed = Math.random() * 15 + 4;
+
+      particles.push({
+        x: centerX + side * (Math.random() * 180 + 30),
+        y: centerY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        size: Math.random() * 3.5 + 1,
+        color: i % 4 === 0 ? '#ffd700' : (i % 4 === 1 ? '#ffffff' : (i % 4 === 2 ? '#cbd5e1' : '#fef08a')),
+        alpha: 0.85,
+        decay: 0.012 + Math.random() * 0.015,
+        type: 'spark',
+        sparkleFlicker: Math.random() * 10
+      });
+    }
+
+    function animate() {
+      if (!ctx || !canvas) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      let alive = false;
+      particles.forEach(p => {
+        if (p.alpha > 0) {
+          alive = true;
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.type === 'smoke') {
+            p.vx *= 0.98; // Desaceleración suave
+            p.vy *= 0.98;
+            p.size += 0.8; // Expansión suave
+            p.alpha -= p.decay;
+
+            const drawAlpha = Math.min(0.25, Math.max(0, p.alpha));
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color + drawAlpha + ')';
+            ctx.fill();
+          } else { // Sparks
+            p.vy += 0.18; // Gravedad suave
+            p.alpha -= p.decay;
+            p.sparkleFlicker = (p.sparkleFlicker || 0) + 1;
+
+            const drawAlpha = Math.sin(p.sparkleFlicker) > 0 ? Math.max(0, p.alpha) : Math.max(0, p.alpha * 0.3);
+
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.globalAlpha = drawAlpha;
+            ctx.fill();
+
+            // Cola brillante de chispas
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p.x - p.vx * 1.5, p.y - p.vy * 1.5);
+            ctx.strokeStyle = p.color;
+            ctx.lineWidth = p.size * 0.6;
+            ctx.stroke();
+
+            ctx.globalAlpha = 1;
+          }
+        }
+      });
+
+      if (alive) {
+        requestAnimationFrame(animate);
+      } else {
+        canvas.classList.add('hidden');
+      }
+    }
+
+    animate();
+  }
+
+  function openEnvelopeSequence() {
+    if (!wrapper || !box) return;
+
+    // Step 1: Flap rotates OPEN 3D Upwards (-180deg)
+    if (flap) {
+      flap.style.transform = 'rotateX(-180deg)';
+      flap.style.zIndex = '5';
+    }
+
+    if (heartSeal) {
+      heartSeal.style.transform = 'scale(1.3) rotate(15deg)';
+      heartSeal.style.opacity = '0';
+    }
+
+    // Step 2: Soft Smoke + Sparks launch dispersed to the sides
+    launchDenseBlueSmokeAndSparks();
+
+    // Step 3: Play background music
+    const audio = document.getElementById('bg-music') as HTMLAudioElement;
+    if (audio) {
+      audio.play().catch(() => {
+        console.log('Autoplay prevented by browser');
+      });
+    }
+
+    // Step 4: LETTER CARD EXTRACTS OUT OF THE ENVELOPE (Slides UP & becomes visible)
+    setTimeout(() => {
+      if (letterCard) {
+        letterCard.style.zIndex = '40';
+        letterCard.style.opacity = '1';
+        letterCard.style.transform = 'translateY(-85%) scale(1.08)';
+        letterCard.style.boxShadow = '0 25px 50px -12px rgba(0, 0, 0, 0.4)';
+      }
+
+      // Step 5: Envelope pocket moves down and dissolves smoothly
+      setTimeout(() => {
+        if (frontPocket) {
+          frontPocket.style.transform = 'translateY(100px)';
+          frontPocket.style.opacity = '0';
+        }
+        if (box) {
+          box.style.transform = 'translateY(100px)';
+          box.style.opacity = '0';
+        }
+
+        // Step 6: Transition envelope wrapper to full invitation view
+        setTimeout(() => {
+          wrapper.style.opacity = '0';
+          wrapper.style.transform = 'scale(1.05)';
+          wrapper.style.pointerEvents = 'none';
+
+          setTimeout(() => {
+            wrapper.style.display = 'none';
+            document.body.style.overflowY = 'auto';
+          }, 700);
+        }, 800);
+
+      }, 700);
+
+    }, 400);
+  }
+
+  document.body.style.overflow = 'hidden';
+
+  const container = document.getElementById('envelope-container');
+  if (container) {
+    container.addEventListener('click', openEnvelopeSequence);
+  }
+</script>

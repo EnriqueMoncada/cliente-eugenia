@@ -1,0 +1,78 @@
+---
+---
+
+<!-- Ambient Music Player Floating Button -->
+<div class="fixed bottom-4 right-4 z-40 flex items-center gap-2">
+  <button id="music-toggle" aria-label="Reproducir o pausar música" class="w-11 h-11 rounded-full bg-slate-900/80 backdrop-blur-md text-white border border-slate-700/60 shadow-lg flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
+    <!-- Playing State SVG -->
+    <svg id="icon-playing" class="w-5 h-5 text-sky-400 hidden animate-spin" style="animation-duration: 4s;" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+    </svg>
+    <!-- Muted State SVG -->
+    <svg id="icon-muted" class="w-5 h-5 text-slate-300" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M4.27 3L3 4.27l9 9v.28c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4v-1.73l4.27 4.27c-.83.67-1.88 1.09-3.04 1.09-2.65 0-4.8-2.04-4.97-4.63l1.84-.04c.15 1.59 1.48 2.84 3.13 2.84 1.77 0 3.2-1.43 3.2-3.2 0-.25-.04-.49-.1-.72l2.36 2.36c.47-.73.74-1.6.74-2.54v-5.55l3 3V7h-4.27l-2-2H13V3h-1.73l-7-7z"/>
+    </svg>
+  </button>
+
+  <!-- Hidden Audio Element playing cancionIntro.mp3 in loop -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="/cancionIntro.mp3" type="audio/mpeg" />
+  </audio>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('music-toggle');
+  const audio = document.getElementById('bg-music') as HTMLAudioElement;
+  const iconPlaying = document.getElementById('icon-playing');
+  const iconMuted = document.getElementById('icon-muted');
+
+  let isPlaying = false;
+
+  function updateIcons() {
+    if (isPlaying) {
+      iconPlaying?.classList.remove('hidden');
+      iconMuted?.classList.add('hidden');
+    } else {
+      iconPlaying?.classList.add('hidden');
+      iconMuted?.classList.remove('hidden');
+    }
+  }
+
+  function startMusic() {
+    if (!audio || isPlaying) return;
+    audio.play().then(() => {
+      isPlaying = true;
+      updateIcons();
+    }).catch((err) => {
+      console.log('Autoplay deferred until user interaction:', err);
+    });
+  }
+
+  if (toggleBtn && audio) {
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        audio.pause();
+        isPlaying = false;
+      } else {
+        startMusic();
+      }
+      updateIcons();
+    });
+
+    audio.addEventListener('play', () => {
+      isPlaying = true;
+      updateIcons();
+    });
+
+    audio.addEventListener('pause', () => {
+      isPlaying = false;
+      updateIcons();
+    });
+
+    // Attempt to start music on initial load and on first user gesture anywhere
+    startMusic();
+    window.addEventListener('click', startMusic, { once: true });
+    window.addEventListener('touchstart', startMusic, { once: true });
+    window.addEventListener('keydown', startMusic, { once: true });
+  }
+</script>
