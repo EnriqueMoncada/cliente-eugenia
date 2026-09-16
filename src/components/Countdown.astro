@@ -37,8 +37,8 @@
 </div>
 
 <script>
-  // Target date: August 29, 2026, 8:00 PM (20:00:00)
-  const targetDate = new Date('2026-08-29T20:00:00');
+  // Target date: November 21, 2026, 8:00 PM (20:00:00)
+  const targetDate = new Date('2026-11-21T20:00:00');
 
   const daysEl = document.getElementById('days');
   const hoursEl = document.getElementById('hours');
@@ -75,16 +75,16 @@
   const btnIcs = document.getElementById('btn-download-ics');
   if (btnIcs) {
     btnIcs.addEventListener('click', () => {
-      const title = "Mis 15 Años - Anthonella Morales";
-      const description = "Estás cordialmente invitado a festejar los 15 años de Anthonella Morales.";
+      const title = "Mis 15 Años - Valeri Hernández Ferrer";
+      const description = "Estás cordialmente invitado a festejar los 15 años de Valeri Hernández Ferrer.";
       const location = "RESTAURANTE CHINO MI SABOR";
-      const startDate = "20260829T200000";
-      const endDate = "20260830T020000";
+      const startDate = "20261121T200000";
+      const endDate = "20261122T020000";
 
       const icsData = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
-        "PRODID:-//Invitacion 15 Anthonella//ES",
+        "PRODID:-//Invitacion 15 Valeri//ES",
         "BEGIN:VEVENT",
         `SUMMARY:${title}`,
         `DESCRIPTION:${description}`,
@@ -100,7 +100,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'Mis_15_Anthonella_Morales.ics');
+      link.setAttribute('download', 'Mis_15_Valeri_Hernandez_Ferrer.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
